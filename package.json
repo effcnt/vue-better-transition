@@ -1,6 +1,6 @@
 {
   "name": "vue-better-transition",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Imad Abdul-Karim <imad-ak@hotmail.com>",
   "scripts": {
     "build": "rm -r dist && vue-tsc && vite build",
