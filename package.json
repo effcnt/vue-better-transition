@@ -1,0 +1,40 @@
+{
+  "name": "vue-better-transition",
+  "version": "0.0.0",
+  "author": "Imad Abdul-Karim <imad-ak@hotmail.com>",
+  "scripts": {
+    "build": "rm -r dist && vue-tsc && vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "docs:preview": "vitepress preview docs",
+    "release": "release-it"
+  },
+  "peerDependencies": {
+    "vue": "2.x || 3.x"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "release-it": "^15.10.1",
+    "vite": "^4.2.1",
+    "vitepress": "^1.0.0-alpha.71",
+    "vue-tsc": "^1.2.0"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "module": "./dist/vue-better-transition.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-better-transition.es.js"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all"
+  }
+}
