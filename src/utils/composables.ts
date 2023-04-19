@@ -1,5 +1,10 @@
 import { reactive, watch, nextTick, readonly } from 'vue'
 
+export type TransitionBoolean = {
+  value: boolean
+  __realValue: boolean
+}
+
 /**
  * Use instead of ref(boolean) for vue-better-transition.
  * @param {boolean} value
@@ -10,7 +15,10 @@ import { reactive, watch, nextTick, readonly } from 'vue'
  *
  * <BetterTransition v-if="showConfirmationModal.value" :visible="showConfirmationModal"> ... </BetterTransition>
  */
-export const transitionBoolean = (value: boolean, delay: number = 500) => {
+export const transitionBoolean = (
+  value: boolean,
+  delay: number = 500,
+): TransitionBoolean => {
   const obj = reactive({
     value,
     __realValue: value,
@@ -70,7 +78,7 @@ export const transitionBoolean = (value: boolean, delay: number = 500) => {
 export const computedTransitionBoolean = (
   getter: () => boolean,
   delay: number = 500,
-) => {
+): Readonly<TransitionBoolean> => {
   const obj = reactive({
     value: getter(),
     __realValue: getter(),

@@ -190,13 +190,6 @@ Notice how the transition works as expected event though `v-if` is used on the t
 
 transitionBoolean is a function that creates a `reactive` object with a `value` property. It's used to create a boolean that can be used with `BetterTransition` to time the visibility correctly.
 
-```ts
-interface TransitionBoolean = (value: boolean, delay: number = 500): {
-  value: boolean
-  __realValue: boolean // this is used internally, don't use it
-}
-```
-
 #### Arguments
 
 | Name   | Type    | Default | Description                       |
@@ -214,9 +207,16 @@ you may be conservative and set the delay to a higher value than the actual tran
 
 A `reactive` object with a `value` property and a `__realValue` property. The `value` property is the boolean that you can use to control the visibility of the transition. The `__realValue` property is used internally and should not be used.
 
+```ts
+type TransitionBoolean = {
+  value: boolean
+  __realValue: boolean // this is used internally, don't use it
+}
+```
+
 ### computedTransitionBoolean
 
-`computedTransitionBoolean` is very similar to `transitionBoolean`. From the name, you can create a `computed` boolean that can be used with `BetterTransition`. For example:
+`computedTransitionBoolean` is very similar to `transitionBoolean`. The difference is that you can create a `computed` boolean that can be used with `BetterTransition`. For example:
 
 ```ts
 const myItems = ref([])
@@ -240,7 +240,7 @@ onMounted(() => {
 
 #### Returns
 
-same as `transitionBoolean` but **readonly**.
+it returns a **readonly** `TransitionBoolean`
 
 ## License
 
