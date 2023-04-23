@@ -2,6 +2,9 @@
   "name": "vue-better-transition",
   "version": "1.0.1",
   "author": "Imad Abdul-Karim <imad-ak@hotmail.com>",
+  "license": "MIT",
+  "homepage": "https://vue-better-transition.netlify.app",
+  "repository": "https://github.com/effcnt/vue-better-transition",
   "scripts": {
     "build": "rm -r dist && vue-tsc && vite build",
     "docs:dev": "vitepress dev docs",
