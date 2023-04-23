@@ -1,5 +1,10 @@
 # Vue Better Transition
 
+<a href="https://www.npmjs.com/package/vue-better-transition"><img src="https://img.shields.io/npm/v/vue-better-transition.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/vue-better-transition"><img src="https://img.shields.io/github/license/effcnt/vue-better-transition.svg" alt="Vue Better Transition is released under the MIT license."></a>
+<a href="https://www.npmjs.com/package/vue-better-transition"><img src="https://img.shields.io/npm/dm/vue-better-transition.svg" alt="Downloads"></a>
+<a href=""><img src="https://img.shields.io/badge/Dependencies-0-lightgray" alt="Vue Better Transition has no dependencies"></a>
+
 `vue-better-transition` is a simple package that provides a better Vue.js transition component that works with the `v-if` directive and can retain its transition.
 
 ## Features
