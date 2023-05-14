@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "author": "Imad Abdul-Karim <imad-ak@hotmail.com>",
   "license": "MIT",
-  "homepage": "https://vue-better-transition.netlify.app",
+  "homepage": "https://vue-better-transition.effcnt.dev",
   "repository": "https://github.com/effcnt/vue-better-transition",
   "scripts": {
     "build": "rm -r dist && vue-tsc && vite build",
